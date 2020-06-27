@@ -13,4 +13,6 @@ public class BranchDto {
     private Double lat;
 
     private String address;
+
+    private Long distance;
 }
