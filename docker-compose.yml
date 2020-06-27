@@ -1,0 +1,16 @@
+version: '3.5'
+
+volumes:
+  postgres: ~
+
+services:
+  postgres:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: docker
+      POSTGRES_USER: docker
+      POSTGRES_DB: example
+    ports:
+      - "${POSTGRESQL_PORT}:5432"
+    volumes:
+      - "postgres:/var/lib/postgresql/data"
